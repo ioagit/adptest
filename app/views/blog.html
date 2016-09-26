@@ -1,0 +1,19 @@
+<div class="header adp-header">
+  <div class="row">
+    <div class="col-md-9 text-left"><p class="lead">Blog</p></div>
+    <div class="col-md-3 text-right">
+      <language-selector selected-lang="blog.selectedLang"></language-selector>
+    </div>
+    </div>
+</div>
+
+<div class="row" ng-show="blog.loading"><p class="bg-info">Loading blog entries from HealthCare.gov... Please wait.</p></div>
+<div class="row" ng-show="blog.error"><p class="bg-danger">{{blog.error}}</p></div>
+<div class="row" ng-repeat="entry in blog.entries | orderBy: 'entry.date' | filter:{'lang': blog.selectedLang || ''}">
+    <div class="col-md-8"><a href="https://healthcare.gov/{{entry.url}}" target="_blank"><h4>{{entry.title}}</h4></a></div>
+    <div class="col-md-4 text-right date">{{ entry.date | strDate }}</div>
+     <div class="clearfix"></div>
+  <div class="col-md-12"><em class="category">in  {{entry.categories | toList }} </em></div>
+  <div class="clearfix"></div>
+  <div class="col-md-12" ng-bind-html="entry.excerpt"></div>
+</div>
