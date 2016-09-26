@@ -2,7 +2,23 @@
 
 This is a small angularjs project for the ADP Test.
 
-This project was bootstrapped using yeoman angular project.
+## Hosting.
+
+* You could see the project running at:
+https://adptest-3350c.firebaseapp.com
+
+## How to run it locally?
+
+* Clone the repo (https://github.com/ioagit/adptest)
+* nmp install
+* bower install
+
+
+## Build & development
+
+Run `grunt serve` for preview.
+Run `grunt serve:dist` to preview the minimize version.
+
 
 ## Dependency management  and tasks
 
@@ -22,20 +38,6 @@ This project was bootstrapped using yeoman angular project.
   The blog controller could have done this but for reusability and keeping lean controllers the filter was created.
 * The toList Filter was create to parse an array and return a string separated by a separator (", ") by default. This was used for the categories on the blog feed.
   This allows for a cleaner html markup and added reusability. 
-
-
-
-## How to run it?
-
-
-* Clone the repo
-* Install with dependencies. (bower install and npm install)
-
-## Build & development
-
-Run `grunt` for building and `grunt serve` for preview.
-Run grunt serve:dist to preview the miminize version.
-
 
 
 ## Testing
